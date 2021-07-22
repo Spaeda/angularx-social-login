@@ -9,6 +9,7 @@ import {
   VKLoginProvider,
   MicrosoftLoginProvider
 } from 'lib';
+import { AppleLoginProvider } from 'projects/lib/src/public-api';
 
 @Component({
   selector: 'lib-app-demo',
@@ -46,6 +47,10 @@ export class DemoComponent implements OnInit {
 
   signInWithMicrosoft(): void {
     this.authService.signIn(MicrosoftLoginProvider.PROVIDER_ID);
+  }
+
+  signInWithApple(): void {
+    this.authService.signIn(AppleLoginProvider.PROVIDER_ID);
   }
 
   signOut(): void {

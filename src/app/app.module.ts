@@ -15,6 +15,7 @@ import {
   VKLoginProvider,
   MicrosoftLoginProvider
 } from 'lib';
+import { AppleLoginProvider } from 'projects/lib/src/public-api';
 
 @NgModule({
   declarations: [AppComponent, NavbarComponent, DemoComponent],
@@ -45,6 +46,12 @@ import {
             id: VKLoginProvider.PROVIDER_ID,
             provider: new VKLoginProvider(
               '7624815'
+            ),
+          },
+          {
+            id: AppleLoginProvider.PROVIDER_ID,
+            provider: new AppleLoginProvider(
+              ''
             ),
           },
           {
